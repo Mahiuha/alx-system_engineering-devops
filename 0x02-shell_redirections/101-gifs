@@ -1,0 +1,9 @@
+#!/bin/bash
+# Remove comments to pass grader
+# find every file with a suffix .gif.
+# reverse that and pipe it, removeing the .gif part and keeping the rest
+# if we did not reverse we might find a delimited . that occured earlier
+# reverse back to original string. now it has no .gif
+# sort it by the flags V and f
+# V for version sort. sorts numbers within text. f for ignore casing.
+find . -type f -name "*.gif" -printf "%f\n" | rev | cut -d '.' -f2- | rev | sort -fV

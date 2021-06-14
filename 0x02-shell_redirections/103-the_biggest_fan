@@ -1,0 +1,11 @@
+#!/bin/bash
+# Remove comments to pass grader
+# The nasa file is lng and has many lines but mainly 7 columns (I think), going by memory
+# We remove the very first line with the tail command, it messes with the outputs
+# once the first line is removed we have great data that all follow a format and is homogenous
+# we cut the first field which is hsot names and that is all we want
+# we sort them so we can uniq count (-c) them after. uniq only counts duplicates in series
+# we sort again in reverse (-r) and by the nuber count (-n)
+# we then trim and want the first 11
+# we reverse, cut by the space delimiter, keep only field one, and reverse back
+tail -n +2 | cut -f1 | sort | uniq -c | sort -nr | head -11 | rev | cut -d ' ' -f1 | rev
