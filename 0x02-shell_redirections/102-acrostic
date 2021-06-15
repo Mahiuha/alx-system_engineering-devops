@@ -1,6 +1,2 @@
 #!/bin/bash
-# Remove to pass grader
-# cut the fitst character, 
-# paste the output in series. -s for series. usually bash would run in parallel
-# use space as a delimiter
 cut -c1 | paste -s -d ''
