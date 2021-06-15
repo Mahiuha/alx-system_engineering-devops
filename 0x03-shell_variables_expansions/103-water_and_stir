@@ -1,9 +1,2 @@
 #!/bin/bash
-# Remove this to pass grader.
-# So first we had to translate the two variables, $WATER and $STIR with their pase of 5.
-# We use arithmetic expression and add them together, the added number is now a decimal value (base 10)
-# Now we will print the octal of that using printf and the -o flag.
-# now we translate that octal sum into behlort base via 01234567
-# The code can work if you did 76543210 trolheb or 01235674 behortl
-# BASES. easy with the |bc command but we could not use that.
 printf "%o\n" $(($((5#$(echo $WATER | tr 'water' '01234'))) + $((5#$(echo $STIR | tr 'stir.' '01234'))))) | tr '01234567' 'behlnort'

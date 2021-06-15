@@ -1,7 +1,2 @@
 #!/bin/bash
-# Remove comment to pass grader
-# translate or replace every letter from the first
-# quote with the equivalent position of the letter in the second quotes
-# This is a very basic encryption method that is just an
-# ASCII + 13 or a - 13
 tr 'A-Za-z' 'N-ZA-Mn-za-m'

@@ -1,7 +1,2 @@
 #!/bin/bash
-# Remove comment to pass grader
-# We will find every alphanumberic, could have used "" blanks to find every file and every thing.
-# then after the first grep, we have added line numbers before each file, followed by a :.
-# Then we will use another grep to find all odds followed by a colon.
-# Then we cut, using the colon as a delimiter and keeping the second field.
 grep -n "[a-zA-Z0-9]" | grep "[13579]:" | cut -d ':' -f2
