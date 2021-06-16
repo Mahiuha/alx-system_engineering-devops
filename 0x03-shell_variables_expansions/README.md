@@ -2,10 +2,8 @@ What I learned from this project
 At the end of this project you are expected to be able to explain to anyone, without the help of Google:
 BLOG POSTS:
 What happens when you type ls *.c?
-https://www.linkedin.com/pulse/what-happens-when-you-type-ls-c-bryan-leung/
 
 What is the difference between a hard link and a symbolic link?
-https://www.linkedin.com/pulse/what-difference-between-hard-link-symbolic-bryan-leung/?published=t
 
 What are the /etc/profile file and the /etc/profile.d directory?
 profile sets the environment variables at start up of bash shell and profile.d contains other scripts that are loaded via profile which makes them a part of them kinda. profile will execute scripts within profile.d/.sh and you should place configurations within profile.d.*
