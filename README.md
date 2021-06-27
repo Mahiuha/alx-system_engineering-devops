@@ -1,3 +1,5 @@
+# alx-system_engineering-devops
+
 What I learned from this project
 At the end of this project you are expected to be able to explain to anyone, without the help of Google:
 BLOG POSTS:
@@ -30,7 +32,7 @@ What is the special parameter =$?
 The parameter ? expands the exit status of the most recently executed foreground pipeline.
 
 What is expansion and how to use them?
-*An example of an expansion is . With expansion when I type something and it is expanded into something else before the shell acts upon it. Expansion can be used like grep. We have pathname expansion, tilde expansion, arithmetic expansion, brace expansion, parameter expansion, and command substitution. Use them with wildcards for maximum omg.
+* An example of an expansion is . With expansion when I type something and it is expanded into something else before the shell acts upon it. Expansion can be used like grep. We have pathname expansion, tilde expansion, arithmetic expansion, brace expansion, parameter expansion, and command substitution. Use them with wildcards for maximum omg.
 
 What is the difference between single and double quotes and how to use them properly?
 Single quotes will not interpret the code so echo '$(echo "poop")' will output (echo "poop"). Double quotes will interpolate which means echo "(echo "YASSS 4 star!")" will print out YASSS 4 star!
