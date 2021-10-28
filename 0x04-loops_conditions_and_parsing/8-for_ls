@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Bash script that displays content
+for search in *
+do
+	echo "$search" | cut -d "-" -f 2
+done
