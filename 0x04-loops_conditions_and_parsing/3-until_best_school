@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Script that displays Holberton School 10 times
-i=1; until [ $i -ge 11 ]; do echo "Holberton School"; ((i++)); done
+i=1; until [ $i -ge 11 ]; do echo "Best School"; ((i++)); done

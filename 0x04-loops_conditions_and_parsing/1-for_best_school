@@ -2,6 +2,6 @@
 # Script that displays Holberton School 10 times
 for i in {0..9}
 do
-	echo "Holberton School"
+	echo "Best School"
 done
 export i
