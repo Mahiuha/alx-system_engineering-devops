@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Script that displays Holberton School 10 times
+# Script that displays Best School 10 times
 i=0; while [ $i -le 9 ]; do echo "Best School"; ((i++)); done
