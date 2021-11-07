@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Infinity loop and sending signal
+# trap receive signal
+trap "echo I am invincible!!!" SIGTERM
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
