@@ -5,5 +5,5 @@ file_line {  'passw_no_autentication':
 }
 file_line {  'passw_direction':
   path => '/etc/ssh/ssh_config',
-  line => 'IdentityFile ~/.ssh/holberton',
+  line => 'IdentityFile ~/.ssh/school',
 }
