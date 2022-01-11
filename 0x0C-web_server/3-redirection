@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # configures an Nginx server so that /redirect_me is redirecting to another page
 
-apt-get -y update
-apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
-sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4;' /etc/nginx/sites-available/default
-service nginx start
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+header="\n\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sed -i "s|listen 80 default_server;|&$header|g" /etc/nginx/sites-available/default
+sudo service nginx restart
