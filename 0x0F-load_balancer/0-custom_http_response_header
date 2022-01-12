@@ -3,7 +3,11 @@
 # HTTP response contains a custom header (on web-01 and web-02)
 sudo apt-get update
 sudo apt-get -y install nginx
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-header="\n\tadd_header X-Served-By '$HOSTNAME';"
-sed -i "s/listen 80 default_server;/&$header/g" /etc/nginx/sites-available/default
+sudo ufw allow 'Nginx HTTP'
+sudo service nginx start
+echo "Hello World!" | sudo tee /var/www/html/index.html
+sudo sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+sudo sed -i '/listen 80 default_server;/a error_page 404 /custom_404.html;\nlocation = /custom_404.html {root /usr/share/nginx/html;\n internal;}' /etc/nginx/sites-available/default
+sudo sed -i '/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;' /etc/nginx/sites-available/default
 sudo service nginx restart
