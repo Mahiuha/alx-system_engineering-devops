@@ -1,5 +1,3 @@
-![alx](https://user-images.githubusercontent.com/35099243/149214345-149e936b-3b60-4d61-a46c-e36c091d157d.png)
-
 # System Engineering and Devops
 
 This repository contains programs and scripts primarily written in Bash and Python for the System Engineering and Devops curriculum at ALX.
