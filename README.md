@@ -1,4 +1,4 @@
-# System Engineering and Devops
+# System Engineering and Devops.
 
 This repository contains programs and scripts primarily written in Bash and Python for the System Engineering and Devops curriculum at ALX.
 
