@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 # Configure your Nginx server so that /redirect_me is redirecting
 # to another page.
-new_string="error_page 404 \/custom_404.html;\n location \/redirect_me {\n return 301 \$scheme:\/\/www.google.com;"
+sudo apt-get update -y
+sudo apt-get install -y nginx
 
-apt-get update -y
-apt-get install nginx -y
-echo "Hello World!" > /usr/share/nginx/html/index.html
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
-sudo sed -i -E "s/^[^#]+location \/ \{/$new_string/" /etc/nginx/sites-available/default
-sudo service nginx start
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://twitter.com/jossvega103 permanent;" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
