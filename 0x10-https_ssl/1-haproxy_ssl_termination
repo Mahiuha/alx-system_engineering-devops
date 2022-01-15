@@ -23,8 +23,8 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 frontend myconf
-        bind :80
-        bind :443 ssl crt /etc/ssl/private/mahi-uha.tech.pem
+        bind *:80
+        bind *:443 ssl crt /etc/ssl/private/mahi-uha.tech.pem
         http-request set-header X-Forwarded-Proto https if { ssl_fc }
         http-request set-header X-Forwarded-Proto http if !{ ssl_fc }
         http-request redirect scheme https code 301 unless { ssl_fc }
