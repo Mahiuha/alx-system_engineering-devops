@@ -35,12 +35,13 @@ defaults
 frontend myconf
         bind :80
         bind :443 ssl crt /etc/ssl/private/mahi-uha.tech.pem
+        http-request set-header X-Forwarded-Proto https if { ssl_fc }
         http-request set-header X-Forwarded-Proto http if !{ ssl_fc }
-        http-request redirect scheme https unless { ssl_fc }
         http-request redirect scheme https unless { ssl_fc }
         mode http
         use_backend mybackend
 backend mybackend
         balance roundrobin
         server 971-web-01 35.227.5.245:80 check
+        server 971-web-02 3.236.14.41:80 check
 
