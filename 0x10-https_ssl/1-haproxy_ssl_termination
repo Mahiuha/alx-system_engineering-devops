@@ -49,12 +49,12 @@ backend mybackend
         balance roundrobin
         server 971-web-01 35.227.5.245:80 check
         server 971-web-02 3.236.14.41:80 check
-frontend myconf
+frontend www-http
         bind *:80
         reqadd X-Forwarded-Proto:\ http
         default_backend www-backend
 
-frontend myconf
+frontend www-https
         bind *:443 ssl crt /etc/ssl/private/mahi-uha.tech.pem
         reqadd X-Forwarded-Proto:\ https
         acl letsencrypt-acl path_beg /.well-known/acme-challenge/
