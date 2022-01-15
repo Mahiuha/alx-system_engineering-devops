@@ -49,7 +49,7 @@ frontend www-http
         reqadd X-Forwarded-Proto:\ http
         default_backend web-backend
 frontend www-https
-        bind :443 ssl crt /etc/ssl/private/mahi-uha.tech.pem
+        bind :443 ssl crt /etc/haproxy/certs/lb-01.mahi-uha.tech.pem
         reqadd X-Forwarded-Proto:\ https
         default_backend web-backend
 backend web-backend
