@@ -8,10 +8,6 @@ global
         group haproxy
         daemon
 
-        # GLOBAL CONFIG
-        maxconn 2048
-        tune.ssl.default-dh-param 2048
-
         # Default SSL material locations
         ca-base /etc/ssl/certs
         crt-base /etc/ssl/private
@@ -38,25 +34,11 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 frontend myconf
         bind :80
+        bind :443 ssl crt /etc/ssl/private/mahi-uha.tech.pem
+        http-request redirect scheme https unless { ssl_fc }
         mode http
         use_backend mybackend
 backend mybackend
         balance roundrobin
         server 971-web-01 35.227.5.245:80 check
-        server 971-web-02 3.236.14.41:80 check
-frontend www-myconf
-        bind *:80
-        reqadd X-Forwarded-Proto:\ http
-        default_backend mybackend
-frontend www-https
-        bind *:443 ssl crt /etc/haproxy/certs/mahi-uha.tech
-        reqadd X-Forwarded-Proto:\ https
-        acl letsencrypt-acl path_beg /.well-known/acme-challenge/
-        use_backend letsencrypt-backend if letsencrypt-acl
-        default_backend mybackend
-backend mybackend
-        redirect scheme https if !{ ssl_fc }
-        server 971-web-01 35.227.5.245:80 check
-        server 971-web-02 3.236.14.41:80 check
-backend letsencrypt-backend
-        server letsencrypt 127.0.0.1:54321
+
