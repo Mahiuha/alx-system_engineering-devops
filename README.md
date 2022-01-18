@@ -21,6 +21,8 @@ This repository contains programs and scripts primarily written in Bash and Pyth
 | [0x0E. Web Stack Debugging #1 ](./0x0E-web_stack_debugging_1) | Debugging NGINX servers with faulty ports |
 | [0x0F. Load Balancer](./0x0F-load_balancer) | Load balancing on HAProxy servers |
 | [Attack is the best defense](./attack_is_the_best_defense) | ARP spoofing and sniffing unencrypted traffic, dictionary attack |
+| [0x10. HTTPS SSL](./0x10-https_ssl) | Configuring HTTPS with Let's Encrypt and certbot |
+| [0x11. What_happens_when_you_type \.\.\.](./0x11-what_happens_when_your_type_holbertonschool_com_in_your_browser_and_press_enter) | A blog and diagram about how the internet works |
 
 ## Author
 
