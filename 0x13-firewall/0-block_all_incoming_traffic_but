@@ -1,0 +1,13 @@
+sudo apt-get install ufw
+sudo ufw status
+sudo ufw enable
+sudo vim /etc/default/ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw app list
+sudo ufw allow ssh
+sudo ufw allow 22/tcp
+sudo ufw allow http
+sudo ufw allow 80/tcp
+sudo ufw allow https
+sudo ufw allow 443/tcp
