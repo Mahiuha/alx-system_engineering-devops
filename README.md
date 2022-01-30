@@ -23,6 +23,9 @@ This repository contains programs and scripts primarily written in Bash and Pyth
 | [Attack is the best defense](./attack_is_the_best_defense) | ARP spoofing and sniffing unencrypted traffic, dictionary attack |
 | [0x10. HTTPS SSL](./0x10-https_ssl) | Configuring HTTPS with Let's Encrypt and certbot |
 | [0x11. What_happens_when_you_type \.\.\.](./0x11-what_happens_when_your_type_holbertonschool_com_in_your_browser_and_press_enter) | A blog and diagram about how the internet works |
+| [0x12. Web stack debugging #2](./0x12-web_stack_debugging_2) | Debugging and running software as another user |
+| [0x13. Firewall](./0x13-firewall) | Setting up UFW to block/allow incoming traffic |
+| [0x14. Mysql](./0x14-mysql) | Implementing Primary-Replica infrastructure in MySQL |
 
 ## Author
 
