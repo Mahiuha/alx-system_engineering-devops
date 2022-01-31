@@ -26,6 +26,7 @@ This repository contains programs and scripts primarily written in Bash and Pyth
 | [0x12. Web stack debugging #2](./0x12-web_stack_debugging_2) | Debugging and running software as another user |
 | [0x13. Firewall](./0x13-firewall) | Setting up UFW to block/allow incoming traffic |
 | [0x14. Mysql](./0x14-mysql) | Implementing Primary-Replica infrastructure in MySQL |
+| [0x15. API](./0x15-api) | Python scripts to export data to CSV and JSON |
 
 ## Author
 
