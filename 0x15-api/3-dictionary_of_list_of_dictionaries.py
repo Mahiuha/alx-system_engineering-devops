@@ -12,27 +12,25 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    sessionReq = requests.Session()
+    import json
+    import requests
+    import sys
 
-    allUsers = 'https://jsonplaceholder.typicode.com/todos'
-    user1 = 'https://jsonplaceholder.typicode.com/users'
+    users = requests.get("https://jsonplaceholder.typicode.com/users")
+    users = users.json()
+    todos = requests.get('https://jsonplaceholder.typicode.com/todos')
+    todos = todos.json()
+    todoAll = {}
 
-    all_users = sessionReq.get(allUsers)
-    user = sessionReq.get(user1)
-
-    json_req = all_users.json()
-    json_user = user.json()
-
-    users = {}
-
-    for one in json_user:
+    for user in users:
         taskList = []
-        for task in json_req:
-            taskDict = {"username": one.get('username'),
-                        "task": task.get('title'),
-                        "completed": task.get('completed')}
-            taskList.append(taskDict)
-        users[one.get('id')] = taskList
+        for task in todos:
+            if task.get('userId') == user.get('id'):
+                taskDict = {"username": user.get('username'),
+                            "task": task.get('title'),
+                            "completed": task.get('completed')}
+                taskList.append(taskDict)
+        todoAll[user.get('id')] = taskList
 
-    with open('todo_all_employees.json', 'w') as f:
-        json.dump(users, f)
+    with open('todo_all_employees.json', mode='w') as f:
+        json.dump(todoAll, f)
