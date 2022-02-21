@@ -35,3 +35,6 @@ $ apt-get install -y ruby
 $ gem install puppet-lint -v 2.1.1 
 ```
 
+## Author
+
+Joseph Mahiuha - [Github](https://github.com/Mahiuha) / [Twitter](https://twitter.com/Joseph_Mahiuha)
