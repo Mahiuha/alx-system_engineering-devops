@@ -13,6 +13,8 @@
 * Your Puppet manifests files must end with the extension .pp
 * Files will be checked with Puppet v3.4
 
+| Project | Description |
+| :--- | :---|
 | [0x00. Sky is the limit not ](./0-the_sky_is_the_limit_not.pp) | Sky is the limit, let's bring that limit higher |
 | [0x01. User, Limit ](./1-user_limit.pp) | Changing the OS configuration so that it is possible to login with the holberton user and open a file without any error message. |
 
