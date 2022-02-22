@@ -41,4 +41,4 @@ While a web server can also serve dynamic content, this task is usually given to
 
 ## Author
 
-** Joseph Mahiuha - [Mahiuha](https://github.com/Mahiuha)
+Joseph Mahiuha - [Mahiuha](https://github.com/Mahiuha)
