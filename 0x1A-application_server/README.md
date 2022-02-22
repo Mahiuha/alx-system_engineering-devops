@@ -1,5 +1,7 @@
 # 0x1A. Application server
 
+![c7d1ed0a2e10d1b4e9b3](https://user-images.githubusercontent.com/35099243/155179732-c464c3e1-7eae-4193-b711-f4504ad00035.jpg)
+
 ## Concepts
 
 For this project, students are expected to look at these concepts:
