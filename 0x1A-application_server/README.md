@@ -1,5 +1,13 @@
 # 0x1A. Application server
 
+## Concepts
+
+For this project, students are expected to look at these concepts:
+
+* [Web Server](https://alx-intranet.hbtn.io/concepts/17)
+* [Server](https://alx-intranet.hbtn.io/concepts/67)
+* [Web stack debugging](https://alx-intranet.hbtn.io/concepts/68)
+
 ## Background Context
 
 While a web server can also serve dynamic content, this task is usually given to an application server. In this project I added this piece to my infrastructure, plug it to my Nginx and make is serve my Airbnb clone project.
