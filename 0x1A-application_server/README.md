@@ -1,5 +1,15 @@
 # 0x1A. Application server
 
+![c7d1ed0a2e10d1b4e9b3](https://user-images.githubusercontent.com/35099243/155179732-c464c3e1-7eae-4193-b711-f4504ad00035.jpg)
+
+## Concepts
+
+For this project, students are expected to look at these concepts:
+
+* [Web Server](https://alx-intranet.hbtn.io/concepts/17)
+* [Server](https://alx-intranet.hbtn.io/concepts/67)
+* [Web stack debugging](https://alx-intranet.hbtn.io/concepts/68)
+
 ## Background Context
 
 While a web server can also serve dynamic content, this task is usually given to an application server. In this project I added this piece to my infrastructure, plug it to my Nginx and make is serve my Airbnb clone project.
@@ -29,4 +39,6 @@ While a web server can also serve dynamic content, this task is usually given to
 * The first line of all your Bash scripts should be exactly #!/usr/bin/env bash
 * The second line of all your Bash scripts should be a comment explaining what is the script doing
 
+## Author
 
+Joseph Mahiuha - [Mahiuha](https://github.com/Mahiuha)
